@@ -1,4 +1,4 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/fSabel/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/fSabel/frontend-project-44/actions)
 <a href="https://codeclimate.com/github/fSabel/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/213a08ff7020becfd9a1/maintainability" /></a>
-<script async id="asciicast-UQFUm9neKYYBOZIFe0D1SRown" src="https://asciinema.org/a/UQFUm9neKYYBOZIFe0D1SRown.js"></script>
+<a href="https://asciinema.org/a/UQFUm9neKYYBOZIFe0D1SRown" target="_blank"><img src="https://asciinema.org/a/UQFUm9neKYYBOZIFe0D1SRown.svg" /></a>
