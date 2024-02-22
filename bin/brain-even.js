@@ -18,44 +18,27 @@ const getRandomNumber = (min, max) => {
 const check = () => {
     const firstStr = "'yes' is wrong answer ;(. Correct answer was 'no'.\n";
     const secondStr = `Let's try again, ${name}!`;
-    let correctSum = 0;
+
     let randomNumber = getRandomNumber(1, 30);
     console.log(`Question: ${randomNumber}`);
     let answer = readlineSync.question('Your answer: ');
     if (answer.toLowerCase() !== 'yes' && answer.toLowerCase() !== 'no'){
         return console.log(`${firstStr}${secondStr}`);
     }
-    // for (let i = correctSum; i === 3; i += 1) {
-    //     let randomNumber = getRandomNumber(1, 30);
-    //     console.log(`Question: ${randomNumber}`);
-    //     let answer = readlineSync.question('Your answer: ');
-    //     if (randomNumber % 2 === 0 && answer.toLowerCase() === 'yes') {
-    //         return console.log('Correct!');
-    //     } else if (randomNumber % 2 !== 0 && answer.toLowerCase() === 'no') {
-    //         return console.log('Correct!');
-    //     } else {
-    //         break;
-    //     }
-    // }
+
     if (randomNumber % 2 === 0 && answer.toLowerCase() === 'yes') {
         console.log('Correct!');
-        correctSum += 1;
     }
     randomNumber = getRandomNumber(1, 30);
     console.log(`Question: ${randomNumber}`);
     answer = readlineSync.question('Your answer: ');
     if (randomNumber % 2 !== 0 && answer.toLowerCase() === 'no') {
         console.log('Correct!');
-        correctSum += 1;
     } 
     randomNumber = getRandomNumber(1, 30);
     console.log(`Question: ${randomNumber}`);
     answer = readlineSync.question('Your answer: ');
 
-    if (correctSum !== 3) {
-        return console.log(`${firstStr}${secondStr}`);
-    }
-    
     return console.log(`Congratulations, ${name}!`);
 };
 
