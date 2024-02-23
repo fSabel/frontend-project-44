@@ -23,7 +23,7 @@ const check = () => {
     console.log(`Question: ${randomNumber}`);
     let answer = readlineSync.question('Your answer: ');
     if (answer.toLowerCase() !== 'yes' && answer.toLowerCase() !== 'no'){
-        return console.log(`${firstStr}${secondStr}`);
+        return `${firstStr}${secondStr}`;
     }
 
     if (randomNumber % 2 === 0 && answer.toLowerCase() === 'yes') {
@@ -39,7 +39,7 @@ const check = () => {
     console.log(`Question: ${randomNumber}`);
     answer = readlineSync.question('Your answer: ');
 
-    return console.log(`Congratulations, ${name}!`);
+    return `Congratulations, ${name}!`;
 };
 
 console.log(check());
