@@ -11,4 +11,4 @@ lint: # запуск линтера
 	npx eslint .
 
 brain-even: # "Проверка на нечётность"
-	node bin/brain-even.js
+	node bin/games/brain-even.js
