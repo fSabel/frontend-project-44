@@ -10,5 +10,8 @@ publish:
 lint: # запуск линтера
 	npx eslint .
 
-brain-even: # "Проверка на нечётность"
+brain-even: # Проверка на нечётность
 	node bin/games/brain-even.js
+
+brain-calc: # Калькулятор
+	node bin/games/brain-calc.js
