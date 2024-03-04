@@ -22,6 +22,7 @@ const check = () => {
     for (let correctly = 1; correctly <= 3; correctly += 1) {
         let randomNumber = getRandomNumber(1, 30);
         console.log(`Question: ${randomNumber}`);
+        let answer = readlineSync.question('Your answer: ');
         if (randomNumber % 2 === 0 && answer.toLowerCase() === 'yes' || randomNumber % 2 !== 0 && answer.toLowerCase() === 'no') {
             console.log('Correct!');
         } else {
