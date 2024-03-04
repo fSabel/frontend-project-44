@@ -14,7 +14,7 @@ const getRandomNumber = (min, max) => {
     return Math.floor(Math.random() * (max - min) + min)
 };
 
-const firstStr = `${answer} is wrong answer ;(. Correct answer was 'no'.\n`;
+const firstStr = `'yes' is wrong answer ;(. Correct answer was 'no'.\n`;
 const secondStr = `Let's try again, ${name}!`;
 
 // Проверка на корректность ответа
@@ -22,8 +22,6 @@ const check = () => {
     for (let correctly = 1; correctly <= 3; correctly += 1) {
         let randomNumber = getRandomNumber(1, 30);
         console.log(`Question: ${randomNumber}`);
-        let answer = readlineSync.question('Your answer: ');
-        let firstStr = `${answer} is wrong answer ;(. Correct answer was 'no'.\n`;
         let secondStr = `Let's try again, ${name}!`;
         if (randomNumber % 2 === 0 && answer.toLowerCase() === 'yes' || randomNumber % 2 !== 0 && answer.toLowerCase() === 'no') {
             console.log('Correct!');
