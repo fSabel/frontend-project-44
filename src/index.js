@@ -14,15 +14,14 @@ const unifiedLogic = () => {
         unitedCondition = condition;
         console.log(`Question: ${randomNumber}`);
         let answer = readlineSync.question('Your answer: ');
-        if (unitedCondition1) {
+        if (unitedCondition) {
             console.log('Correct!');
         } else {
             return `${firstStr}${secondStr}`;
         }
     }
     return `Congratulations, ${name}!`;
-
 };
 
-
+export default unifiedLogic;
 
