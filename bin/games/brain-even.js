@@ -1,11 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-
-// Приветствие, начало игры
-console.log('Welcome to the Brain Games!');
-const name = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${name}!`);
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
+import unifiedLogic from '/home/gringblade/frontend-project-44/src/index.js'
 
 // Реализуем случайное число
 const getRandomNumber = (min, max) => {
@@ -14,23 +9,23 @@ const getRandomNumber = (min, max) => {
     return Math.floor(Math.random() * (max - min) + min)
 };
 
-const firstStr = `'yes' is wrong answer ;(. Correct answer was 'no'.\n`;
-const secondStr = `Let's try again, ${name}!`;
+// Правила игры
+const rulesEven = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 // Проверка на корректность ответа
+const round = () => {
+    let randomNumber = getRandomNumber(1, 30);
+    let question = `Question: ${randomNumber}`;
+    console.log(question);
+    let answer = readlineSync.question('Your answer: ');
+    
+    return [`${randomNumber}`, answer];
+}
+
 const check = () => {
-    for (let correctly = 1; correctly <= 3; correctly += 1) {
-        let randomNumber = getRandomNumber(1, 30);
-        console.log(`Question: ${randomNumber}`);
-        let answer = readlineSync.question('Your answer: ');
-        if (randomNumber % 2 === 0 && answer.toLowerCase() === 'yes' || randomNumber % 2 !== 0 && answer.toLowerCase() === 'no') {
-            console.log('Correct!');
-        } else {
-            return `${firstStr}${secondStr}`;
-        }
-    }
-    return `Congratulations, ${name}!`;
-};
+    const rules = `${rulesEven}`
+    unifiedLogic(rules, round);
+}
 
 console.log(check());
 
