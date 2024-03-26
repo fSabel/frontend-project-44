@@ -1,27 +1,25 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-const unifiedLogic = () => {
+const unifiedLogic = (isRules, funcForRound) => {
     // Приветствие, начало игры
     console.log('Welcome to the Brain Games!');
     const name = readlineSync.question('May I have your name? ');
     console.log(`Hello, ${name}!`);
-    let unitedRule = ruleForGame;
-    console.log(unitedRule);
-    let unitedCondition;
-
-    for (let correctly = 1; correctly <= 3; correctly += 1) {
-        unitedCondition = condition;
-        console.log(`Question: ${randomNumber}`);
-        let answer = readlineSync.question('Your answer: ');
-        if (unitedCondition) {
-            console.log('Correct!');
-        } else {
-            return `${firstStr}${secondStr}`;
-        }
+    console.log(isRules);
+  
+    for (let i = 0; i < 3; i += 1) {
+      const [question, answer] = funcForRound();
+      console.log(`Question: ${question}`);
+      const resAnswer = readlineSync.question('Your answer: ');
+      const firstStr = `${answer} is wrong answer ;(. Correct answer was ${resAnswer}.\n`;
+      const secondStr = `Let's try again, ${name}!`;
+      if (answer !== resAnswer) {
+        return `${firstStr}${secondStr}`
+      }
     }
     return `Congratulations, ${name}!`;
-};
-
-export default unifiedLogic;
+  };
+  
+  export default unifiedLogic;
 
