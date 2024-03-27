@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import unifiedLogic from '/home/gringblade/frontend-project-44/src/index.js';
+import unifiedLogic from '../../src/index.js';
 
 // Реализуем случайное число
 const getRandomNumber = (min, max) => {
@@ -15,7 +15,7 @@ const round = () => {
   let answer;
   // Генерация случайных математических операций
   const ops = ['+', '-', '*'];
-  const opindex = getRandomNumber(0, 2);
+  const opindex = getRandomNumber(0, 3);
   const operator = ops[opindex];
   const randomNumber1 = getRandomNumber(1, 30);
   const randomNumber2 = getRandomNumber(1, 30);
