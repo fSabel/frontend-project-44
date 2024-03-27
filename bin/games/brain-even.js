@@ -14,17 +14,22 @@ const rulesEven = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 // Проверка на корректность ответа
 const round = () => {
+    let answer;
     let randomNumber = getRandomNumber(1, 30);
     let question = `Question: ${randomNumber}`;
     console.log(question);
-    let answer = readlineSync.question('Your answer: ');
+    if (randomNumber % 2 === 0) {
+        answer = 'yes';
+    } else {
+        answer = 'no';
+    }
     
-    return [`${randomNumber}`, answer];
+    return answer;
 }
 
 const check = () => {
     const rules = `${rulesEven}`
-    unifiedLogic(rules, round);
+    return unifiedLogic(rules, round);
 }
 
 console.log(check());
