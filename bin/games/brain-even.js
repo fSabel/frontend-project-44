@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import unifiedLogic from '/home/gringblade/frontend-project-44/src/index.js';
+import unifiedLogic from '../../src/index.js';
 
 // Реализуем случайное число
 const getRandomNumber = (min, max) => {
