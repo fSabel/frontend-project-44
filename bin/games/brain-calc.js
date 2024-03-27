@@ -1,18 +1,39 @@
-// Генерация случайных математических операций
-// const ops=['+','-','*'];
+#!/usr/bin/env node
+import unifiedLogic from '/home/gringblade/frontend-project-44/src/index.js';
 
-// let opindex = getRandomNumber(0, 2);
-// let operator = ops[opindex];
-// console.log(operator);
+// Реализуем случайное число
+const getRandomNumber = (min, max) => {
+  const minimum = Math.ceil(min);
+  const maximum = Math.floor(max);
+  return Math.floor(Math.random() * (maximum - minimum) + minimum);
+};
 
+// Правила игры
+const rulesCalc = 'What is the result of the expression?';
 
-// if (operator === '+') {
-//   result = num1 + num2;
-//   console.log(result);
-// } else if (operator === '-') {
-//   result = num1 - num2;
-//   console.log(result);
-// } else {
-//   result = num1 * num2;
-//   console.log(result);
-// }
+const round = () => {
+  let answer;
+  // Генерация случайных математических операций
+  const ops = ['+', '-', '*'];
+  const opindex = getRandomNumber(0, 2);
+  const operator = ops[opindex];
+  const randomNumber1 = getRandomNumber(1, 30);
+  const randomNumber2 = getRandomNumber(1, 30);
+  const question = `Question: ${randomNumber1} ${operator} ${randomNumber2}`;
+  console.log(question);
+  if (operator === '+') {
+    answer = randomNumber1 + randomNumber2;
+  } else if (operator === '-') {
+    answer = randomNumber1 - randomNumber2;
+  } else {
+    answer = randomNumber1 * randomNumber2;
+  }
+  return answer.toString();
+};
+
+const check = () => {
+  const rules = `${rulesCalc}`;
+  return unifiedLogic(rules, round);
+};
+
+console.log(check());
