@@ -12,16 +12,14 @@ const unifiedLogic = (isRules, funcForRound) => {
     const answer = funcForRound();
     const resAnswer = readlineSync.question('Your answer: ');
     // Отрицательный результат
-    const firstStr = `${answer} is wrong answer ;(. Correct answer was ${resAnswer}.\n`;
+    const firstStr = `${resAnswer} is wrong answer ;(. Correct answer was ${answer}.\n`;
     const secondStr = `Let's try again, ${name}!`;
-    
+
     if (resAnswer !== answer) {
       return `${firstStr}${secondStr}`;
     }
-    continue;
   }
   return `Congratilations, ${name}!`;
 };
-  
-export default unifiedLogic;
 
+export default unifiedLogic;
