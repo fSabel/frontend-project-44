@@ -15,3 +15,6 @@ brain-even: # Проверка на нечётность
 
 brain-calc: # Калькулятор
 	node bin/games/brain-calc.js
+
+brain-gcd: # НОД
+	node bin/games/brain-gcd.js
