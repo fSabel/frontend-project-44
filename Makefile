@@ -18,3 +18,6 @@ brain-calc: # Калькулятор
 
 brain-gcd: # НОД
 	node bin/games/brain-gcd.js
+
+brain-progression: # Арифметическая прогрессия
+	node bin/games/brain-progression.js
