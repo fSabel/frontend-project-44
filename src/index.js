@@ -18,6 +18,7 @@ const unifiedLogic = (isRules, funcForRound) => {
     if (resAnswer !== answer) {
       return `${firstStr}${secondStr}`;
     }
+    console.log('Correct!');
   }
   return `Congratilations, ${name}!`;
 };
