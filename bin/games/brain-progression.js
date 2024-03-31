@@ -25,11 +25,18 @@ const round = () => {
   const question = `Question: ${array.join(' ')}`;
   console.log(question);
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] === '..') {
-      answer = array[i - 1] + randomProgression;
+    if (i === 0) {
+      if (array[i] === '..') {
+        answer = array[i + 1] - randomProgression;
+      }
+    } else if (i === array.length - 1) {
+      if (array[i] === '..') {
+        answer = array[i - 1] + randomProgression;
+      }
+    } else if (array[i] === '..') {
+      answer = array[i + 1] - randomProgression;
     }
   }
-
   return answer.toString();
 };
 
