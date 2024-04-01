@@ -13,9 +13,9 @@ const round = () => {
 
   // Поиск НОД
   if (randomNumber1 >= randomNumber2 && randomNumber1 % randomNumber2 === 0) {
-    answer = randomNumber2;
+    return randomNumber2.toString();
   } else if (randomNumber1 <= randomNumber2 && randomNumber2 % randomNumber1 === 0) {
-    answer = randomNumber1;
+    return randomNumber1.toString();
   } else {
     const arr = [randomNumber1, randomNumber2];
     if (arr[0] < arr[1]) {
