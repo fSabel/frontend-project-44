@@ -6,13 +6,7 @@ const rulesPrime = 'Answer "yes" if given number is prime. Otherwise answer "no"
 
 const round = () => {
   let answer;
-  const factorial = (num) => {
-    if (num === 0) {
-      return 1;
-    }
-
-    return num * factorial(num - 1);
-  };
+  let count = 0;
   const randomNumber = getRandomNumber(1, 30);
   const question = `Question: ${randomNumber}`;
   console.log(question);
@@ -20,8 +14,16 @@ const round = () => {
     answer = 'no';
     return answer;
   }
-
-  if (factorial(randomNumber - 1) % randomNumber === randomNumber - 1) {
+  const checkForSimpleNum = [];
+  for (let i = randomNumber; i >= 1; i -= 1) {
+    checkForSimpleNum.push(i);
+  }
+  for (let i = 0; i < checkForSimpleNum.length; i += 1) {
+    if (randomNumber % checkForSimpleNum[i] === 0) {
+      count += 1;
+    }
+  }
+  if (count === 2) {
     answer = 'yes';
   } else {
     answer = 'no';
