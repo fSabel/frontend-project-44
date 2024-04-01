@@ -21,3 +21,6 @@ brain-gcd: # НОД
 
 brain-progression: # Арифметическая прогрессия
 	node bin/games/brain-progression.js
+
+brain-prime: # Простое число
+	node bin/games/brain-prime.js
