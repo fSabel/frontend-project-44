@@ -26,5 +26,5 @@ export const unifiedLogic = (isRules, funcForRound) => {
     }
     console.log('Correct!');
   }
-  return `Congratilations, ${name}!`;
+  return `Congratulations, ${name}!`;
 };
