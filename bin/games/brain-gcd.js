@@ -14,20 +14,21 @@ const round = () => {
   // Поиск НОД
   if (randomNumber1 >= randomNumber2 && randomNumber1 % randomNumber2 === 0) {
     return randomNumber2.toString();
-  } else if (randomNumber1 <= randomNumber2 && randomNumber2 % randomNumber1 === 0) {
+  }
+
+  if (randomNumber1 <= randomNumber2 && randomNumber2 % randomNumber1 === 0) {
     return randomNumber1.toString();
-  } else {
-    const arr = [randomNumber1, randomNumber2];
-    if (arr[0] < arr[1]) {
-      arr.reverse();
-    }
-    for (let i = 0; i < arr.length; i += 1) {
-      const res = arr[i] % arr[i + 1];
-      arr.push(res);
-      if (res === 0) {
-        answer = arr[i + 1];
-        return answer.toString();
-      }
+  }
+  const arr = [randomNumber1, randomNumber2];
+  if (arr[0] < arr[1]) {
+    arr.reverse();
+  }
+  for (let i = 0; i < arr.length; i += 1) {
+    const res = arr[i] % arr[i + 1];
+    arr.push(res);
+    if (res === 0) {
+      answer = arr[i + 1];
+      return answer.toString();
     }
   }
   return answer.toString();
