@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-import { getRandomNumber } from '../../src/index.js';
-import unifiedLogic from '../../src/index.js';
+import { getRandomNumber, unifiedLogic } from '../../src/index.js';
 
 // Правила игры
 const rulesEven = 'Answer "yes" if the number is even, otherwise answer "no".';

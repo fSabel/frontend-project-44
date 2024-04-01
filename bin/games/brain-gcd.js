@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-import { getRandomNumber } from '../../src/index.js';
-import unifiedLogic from '../../src/index.js';
+import { getRandomNumber, unifiedLogic } from '../../src/index.js';
 
 // Правила игры
 const rulesGcd = 'Find the greatest common divisor of given numbers.';

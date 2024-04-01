@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-import { getRandomNumber } from '../../src/index.js';
-import unifiedLogic from '../../src/index.js';
+import { getRandomNumber, unifiedLogic } from '../../src/index.js';
 
 // Правила игры
 const rulesPrime = 'Answer "yes" if given number is prime. Otherwise answer "no".';
