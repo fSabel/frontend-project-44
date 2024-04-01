@@ -1,12 +1,5 @@
 #!/usr/bin/env node
-import unifiedLogic from '../../src/index.js';
-
-// Реализуем случайное число
-const getRandomNumber = (min, max) => {
-  const minimum = Math.ceil(min);
-  const maximum = Math.floor(max);
-  return Math.floor(Math.random() * (maximum - minimum) + minimum);
-};
+import { getRandomNumber, unifiedLogic } from '../../src/index.js';
 
 // Правила игры
 const rulesEven = 'Answer "yes" if the number is even, otherwise answer "no".';

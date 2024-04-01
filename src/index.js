@@ -1,7 +1,13 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-const unifiedLogic = (isRules, funcForRound) => {
+export const getRandomNumber = (min, max) => {
+  const minimum = Math.ceil(min);
+  const maximum = Math.floor(max);
+  return Math.floor(Math.random() * (maximum - minimum) + minimum);
+};
+
+export const unifiedLogic = (isRules, funcForRound) => {
   // Приветствие, начало игры
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
@@ -22,5 +28,3 @@ const unifiedLogic = (isRules, funcForRound) => {
   }
   return `Congratilations, ${name}!`;
 };
-
-export default unifiedLogic;

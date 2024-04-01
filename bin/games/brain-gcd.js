@@ -1,11 +1,5 @@
 #!/usr/bin/env node
-import unifiedLogic from '../../src/index.js';
-
-const getRandomNumber = (min, max) => {
-  const minimum = Math.ceil(min);
-  const maximum = Math.floor(max);
-  return Math.floor(Math.random() * (maximum - minimum) + minimum);
-};
+import { getRandomNumber, unifiedLogic } from '../../src/index.js';
 
 // Правила игры
 const rulesGcd = 'Find the greatest common divisor of given numbers.';
