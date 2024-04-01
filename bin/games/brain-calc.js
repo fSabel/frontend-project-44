@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-import { getRandomNumber, unifiedLogic } from '../../src/index.js';
+import { getRandomNumber } from '../../src/index.js';
+import unifiedLogic from '../../src/index.js';
 
 // Правила игры
 const rulesCalc = 'What is the result of the expression?';
