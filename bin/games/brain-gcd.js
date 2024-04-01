@@ -21,8 +21,6 @@ const round = () => {
     const newArr = arr.sort((a, b) => a - b);
     for (let i = 0; i < newArr.length; i += 1) {
       const res = newArr[i] % newArr[i + 1];
-      arr.push(res);
-      console.log(newArr);
       if (res === 0) {
         answer = newArr[i + 1];
         return answer.toString();
