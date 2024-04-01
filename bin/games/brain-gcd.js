@@ -18,11 +18,14 @@ const round = () => {
     answer = randomNumber1;
   } else {
     const arr = [randomNumber1, randomNumber2];
-    const newArr = arr.sort((a, b) => a - b);
-    for (let i = 0; i < newArr.length; i += 1) {
-      const res = newArr[i] % newArr[i + 1];
+    if (arr[0] < arr[1]) {
+      arr.reverse();
+    }
+    for (let i = 0; i < arr.length; i += 1) {
+      const res = arr[i] % arr[i + 1];
+      arr.push(res);
       if (res === 0) {
-        answer = newArr[i + 1];
+        answer = arr[i + 1];
         return answer.toString();
       }
     }
