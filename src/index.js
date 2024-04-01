@@ -7,7 +7,7 @@ export const getRandomNumber = (min, max) => {
   return Math.floor(Math.random() * (maximum - minimum) + minimum);
 };
 
-export const unifiedLogic = (isRules, funcForRound) => {
+const unifiedLogic = (isRules, funcForRound) => {
   // Приветствие, начало игры
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
@@ -28,3 +28,5 @@ export const unifiedLogic = (isRules, funcForRound) => {
   }
   return `Congratilations, ${name}!`;
 };
+
+export default unifiedLogic;
