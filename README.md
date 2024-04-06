@@ -11,6 +11,12 @@
     <li>Definition of a prime number;</li>
     <li>Calculator</li>
 </ul>
+<h2>Installation and launch of the project</h2>
+<p>To install the project, you will need to perform a number of actions:</p>
+<ol>
+    <li>You need to enter the command:/n<code>git clone "ssh-key of project"</code>/nThis is necessary for cloning the project itself</li>
+    <li>Install all dependencies. To do this, enter the command:/n<code>make install</code></li>
+</ol>
 <a href="https://asciinema.org/a/N3zdUDZiv1zuw20ei06UA2yYT" target="_blank"><img src="https://asciinema.org/a/N3zdUDZiv1zuw20ei06UA2yYT.svg" /></a>
 <a href="https://asciinema.org/a/wPgTttdFKNbt52wq7SLXtjldS" target="_blank"><img src="https://asciinema.org/a/wPgTttdFKNbt52wq7SLXtjldS.svg" /></a>
 <a href="https://asciinema.org/a/tXr9vQzfwZ7U8nW7WM1OIiCtS" target="_blank"><img src="https://asciinema.org/a/tXr9vQzfwZ7U8nW7WM1OIiCtS.svg" /></a>
