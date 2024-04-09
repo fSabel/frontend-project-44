@@ -3,11 +3,6 @@
   "version": "1.0.0",
   "type": "module",
   "description": "A console application consisting of a set of five simple math games",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
   "license": "ISC",
   "bin": {
     "brain-games": "bin/brain-games.js",
