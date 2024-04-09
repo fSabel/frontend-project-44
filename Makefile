@@ -1,26 +1,26 @@
-install: #установка зависимостей
+install: # Installing dependencies
 	npm ci
 
-brain-games: # приветствие
+brain-games: # Greeting
 	node bin/brain-games.js
 
-publish:
+publish: # Updating packages
 	npm publish --dry-run
 
-lint: # запуск линтера
+lint: # Launching the linter
 	npx eslint .
 
-brain-even: # Проверка на нечётность
+brain-even: # Determining an even number
 	node bin/games/brain-even.js
 
-brain-calc: # Калькулятор
+brain-calc: # Calculator
 	node bin/games/brain-calc.js
 
-brain-gcd: # НОД
+brain-gcd: # Determining the largest common divisor
 	node bin/games/brain-gcd.js
 
-brain-progression: # Арифметическая прогрессия
+brain-progression: # Searching for missing numbers in a sequence of numbers
 	node bin/games/brain-progression.js
 
-brain-prime: # Простое число
+brain-prime: # Definition of a prime number
 	node bin/games/brain-prime.js
