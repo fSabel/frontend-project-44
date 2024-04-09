@@ -23,11 +23,11 @@
 <p>To launch the project, it is enough to enter - <code>brain-games</code><br />
 Since the project involves five mathematical games, the launch will be appropriate:</p><br />
 <ul>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>Searching for missing numbers in a sequence of numbers - <code>brain-progression</code>;</li>
+    <li>Determining an even number - <code>brain-even</code>;</li>
+    <li>Determining the largest common divisor - <code>brain-gcd</code>;</li>
+    <li>Definition of a prime number - <code>brain-prime</code>;</li>
+    <li>Calculator - <code>brain-calc</code>.</li>
 </ul>
 <a href="https://asciinema.org/a/N3zdUDZiv1zuw20ei06UA2yYT" target="_blank"><img src="https://asciinema.org/a/N3zdUDZiv1zuw20ei06UA2yYT.svg" /></a>
 <a href="https://asciinema.org/a/wPgTttdFKNbt52wq7SLXtjldS" target="_blank"><img src="https://asciinema.org/a/wPgTttdFKNbt52wq7SLXtjldS.svg" /></a>
