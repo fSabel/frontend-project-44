@@ -21,7 +21,7 @@
     <code>make install</code>.</li>
 </ol>
 <p>To launch the project, it is enough to enter - <code>brain-games</code><br />
-Since the project involves five mathematical games, the launch will be appropriate:</p><br />
+Since the project involves five mathematical games, the launch will be appropriate:</p>
 <ul>
     <li>Searching for missing numbers in a sequence of numbers - <code>brain-progression</code>;</li>
     <li>Determining an even number - <code>brain-even</code>;</li>
@@ -29,7 +29,7 @@ Since the project involves five mathematical games, the launch will be appropria
     <li>Definition of a prime number - <code>brain-prime</code>;</li>
     <li>Calculator - <code>brain-calc</code>.</li>
 </ul>
-<a href="https://asciinema.org/a/N3zdUDZiv1zuw20ei06UA2yYT" target="_blank"><img src="https://asciinema.org/a/N3zdUDZiv1zuw20ei06UA2yYT.svg" /></a>
+[![asciicast](https://asciinema.org/a/N3zdUDZiv1zuw20ei06UA2yYT.svg)](https://asciinema.org/a/N3zdUDZiv1zuw20ei06UA2yYT)
 <a href="https://asciinema.org/a/wPgTttdFKNbt52wq7SLXtjldS" target="_blank"><img src="https://asciinema.org/a/wPgTttdFKNbt52wq7SLXtjldS.svg" /></a>
 <a href="https://asciinema.org/a/tXr9vQzfwZ7U8nW7WM1OIiCtS" target="_blank"><img src="https://asciinema.org/a/tXr9vQzfwZ7U8nW7WM1OIiCtS.svg" /></a>
 <a href="https://asciinema.org/a/Sq2NMfIZ2jOjR9rO9hVbMojm7" target="_blank"><img src="https://asciinema.org/a/Sq2NMfIZ2jOjR9rO9hVbMojm7.svg" /></a>
