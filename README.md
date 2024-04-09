@@ -30,8 +30,10 @@ Since the project involves five mathematical games, the launch will be appropria
     <li>Calculator - <code>brain-calc</code>.</li>
 </ul>
 <h2>Asciinema</h2>
-<a href="https://asciinema.org/a/N3zdUDZiv1zuw20ei06UA2yYT" target="_blank">Determining an even number</a>
-<a href="https://asciinema.org/a/wPgTttdFKNbt52wq7SLXtjldS" target="_blank">Calculator</a>
-<a href="https://asciinema.org/a/tXr9vQzfwZ7U8nW7WM1OIiCtS" target="_blank">Determining the largest common divisor</a>
-<a href="https://asciinema.org/a/Sq2NMfIZ2jOjR9rO9hVbMojm7" target="_blank">Searching for missing numbers in a sequence of numbers</a>
-<a href="https://asciinema.org/a/tDygiQwzhsAWjbAMUMHpSKTCY" target="_blank">Definition of a prime number</a>
+<ul>
+    <li><a href="https://asciinema.org/a/N3zdUDZiv1zuw20ei06UA2yYT" target="_blank">Determining an even number</a></li>
+    <li><a href="https://asciinema.org/a/wPgTttdFKNbt52wq7SLXtjldS" target="_blank">Calculator</a></li>
+    <li><a href="https://asciinema.org/a/tXr9vQzfwZ7U8nW7WM1OIiCtS" target="_blank">Determining the largest common divisor</a></li>
+    <li><a href="https://asciinema.org/a/Sq2NMfIZ2jOjR9rO9hVbMojm7" target="_blank">Searching for missing numbers in a sequence of numbers</a></li>
+    <li><a href="https://asciinema.org/a/tDygiQwzhsAWjbAMUMHpSKTCY" target="_blank">Definition of a prime number</a></li>
+</ul>
