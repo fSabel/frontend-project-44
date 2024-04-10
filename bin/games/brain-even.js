@@ -15,7 +15,6 @@ const generateRound = () => {
   } else {
     answer = 'no';
   }
-
   return [question, answer];
 };
 
