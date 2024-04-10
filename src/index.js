@@ -1,22 +1,18 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import greeting from './cli.js';
 
-export const getRandomNumber = (min, max) => {
-  const minimum = Math.ceil(min);
-  const maximum = Math.floor(max);
-  return Math.floor(Math.random() * (maximum - minimum) + minimum);
-};
+const runEngine = (isRules, generateRound) => {
+  const roundsCount = 3;
 
-export const unifiedLogic = (isRules, funcForRound) => {
-  // Приветствие, начало игры
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
+  const name = greeting().split('!').join('').split(', ')[1];
   console.log(isRules);
 
-  for (let i = 0; i < 3; i += 1) {
-    const answer = funcForRound();
+  for (let i = 0; i < roundsCount; i += 1) {
+    const [question, answer] = generateRound();
+    console.log(question);
     const resAnswer = readlineSync.question('Your answer: ');
+
     // Отрицательный результат
     const firstStr = `${resAnswer} is wrong answer ;(. Correct answer was ${answer}.\n`;
     const secondStr = `Let's try again, ${name}!`;
@@ -28,3 +24,5 @@ export const unifiedLogic = (isRules, funcForRound) => {
   }
   return `Congratulations, ${name}!`;
 };
+
+export default runEngine;
