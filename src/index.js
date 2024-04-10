@@ -6,6 +6,7 @@ const runEngine = (isRules, generateRound) => {
   const roundsCount = 3;
 
   const name = greeting().split('!').join('').split(', ')[1];
+  console.log(`Hello, ${name}!`);
   console.log(isRules);
 
   for (let i = 0; i < roundsCount; i += 1) {
