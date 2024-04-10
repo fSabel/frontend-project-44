@@ -1,19 +1,20 @@
 #!/usr/bin/env node
-import { getRandomNumber, unifiedLogic } from '../../src/index.js';
+import runEngine from '../../src/index.js';
+import getRandomInRange from '../../src/utils.js';
 
 // Правила игры
 const rulesCalc = 'What is the result of the expression?';
 
-const round = () => {
+const generateRound = () => {
   let answer;
   // Генерация случайных математических операций
   const ops = ['+', '-', '*'];
-  const opindex = getRandomNumber(0, 3);
+  const opindex = getRandomInRange(1, 3);
   const operator = ops[opindex];
-  const randomNumber1 = getRandomNumber(1, 30);
-  const randomNumber2 = getRandomNumber(1, 30);
+  const randomNumber1 = getRandomInRange();
+  const randomNumber2 = getRandomInRange();
   const question = `Question: ${randomNumber1} ${operator} ${randomNumber2}`;
-  console.log(question);
+
   if (operator === '+') {
     answer = randomNumber1 + randomNumber2;
   } else if (operator === '-') {
@@ -21,12 +22,11 @@ const round = () => {
   } else {
     answer = randomNumber1 * randomNumber2;
   }
-  return answer.toString();
+  return [question, answer.toString()];
 };
 
 const check = () => {
   const rules = `${rulesCalc}`;
-  return unifiedLogic(rules, round);
+  return runEngine(rules, generateRound);
 };
-
 console.log(check());
