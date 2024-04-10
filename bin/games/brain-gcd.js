@@ -1,23 +1,24 @@
 #!/usr/bin/env node
-import { getRandomNumber, unifiedLogic } from '../../src/index.js';
+import runEngine from '../../src/index.js';
+import getRandomInRange from '../../src/utils.js';
 
 // Правила игры
 const rulesGcd = 'Find the greatest common divisor of given numbers.';
 
-const round = () => {
+const generateRound = () => {
   let answer;
-  const randomNumber1 = getRandomNumber(1, 40);
-  const randomNumber2 = getRandomNumber(1, 40);
+  const randomNumber1 = getRandomInRange(1);
+  const randomNumber2 = getRandomInRange(1);
+
   const question = `Question: ${randomNumber1} ${randomNumber2}`;
-  console.log(question);
 
   // Поиск НОД
   if (randomNumber1 >= randomNumber2 && randomNumber1 % randomNumber2 === 0) {
-    return randomNumber2.toString();
+    return [question, randomNumber2.toString()];
   }
 
   if (randomNumber1 <= randomNumber2 && randomNumber2 % randomNumber1 === 0) {
-    return randomNumber1.toString();
+    return [question, randomNumber1.toString()];
   }
   const arr = [randomNumber1, randomNumber2];
   if (arr[0] < arr[1]) {
@@ -28,14 +29,14 @@ const round = () => {
     arr.push(res);
     if (res === 0) {
       answer = arr[i + 1];
-      return answer.toString();
+      return [question, answer.toString()];
     }
   }
-  return answer.toString();
+  return [question, answer.toString()];
 };
 
 const check = () => {
   const rules = `${rulesGcd}`;
-  return unifiedLogic(rules, round);
+  return runEngine(rules, generateRound);
 };
 console.log(check());
