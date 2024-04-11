@@ -9,7 +9,7 @@ const generateRound = () => {
   let answer;
   // Генерация случайных математических операций
   const ops = ['+', '-', '*'];
-  const opindex = getRandomInRange(1, 3);
+  const opindex = getRandomInRange(0, 2);
   const operator = ops[opindex];
   const randomNumber1 = getRandomInRange();
   const randomNumber2 = getRandomInRange();
