@@ -2,10 +2,10 @@
 import runEngine from '../../src/index.js';
 import getRandomInRange from '../../src/utils.js';
 
-// Правила игры
+// The rules of the game
 const rulesEven = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-// Проверка на корректность ответа
+// Checking for the correctness of the response
 const generateRound = () => {
   let answer;
   const randomNumber = getRandomInRange();

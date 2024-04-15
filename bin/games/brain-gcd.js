@@ -2,7 +2,7 @@
 import runEngine from '../../src/index.js';
 import getRandomInRange from '../../src/utils.js';
 
-// Правила игры
+// The rules of the game
 const rulesGcd = 'Find the greatest common divisor of given numbers.';
 
 const generateRound = () => {
@@ -12,7 +12,7 @@ const generateRound = () => {
 
   const question = `Question: ${randomNumber1} ${randomNumber2}`;
 
-  // Поиск НОД
+  // Finding the largest common divisor
   if (randomNumber1 >= randomNumber2 && randomNumber1 % randomNumber2 === 0) {
     return [question, randomNumber2.toString()];
   }

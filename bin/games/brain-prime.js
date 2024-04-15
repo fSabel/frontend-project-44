@@ -2,7 +2,7 @@
 import runEngine from '../../src/index.js';
 import getRandomInRange from '../../src/utils.js';
 
-// Правила игры
+// The rules of the game
 const rulesPrime = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const generateRound = () => {
@@ -10,7 +10,7 @@ const generateRound = () => {
   let count = 0;
   const randomNumber = getRandomInRange(1, 30);
   const question = `Question: ${randomNumber}`;
-
+  // Is it a prime number or not
   if (randomNumber === 1) {
     answer = 'no';
     return answer;

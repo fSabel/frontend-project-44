@@ -2,11 +2,12 @@
 import runEngine from '../../src/index.js';
 import getRandomInRange from '../../src/utils.js';
 
-// Правила игры
+// The rules of the game
 const rulesProgression = 'What number is missing in the progression?';
 
 const generateRound = () => {
   let answer;
+  // Generating a random sequence
   const randomProgression = getRandomInRange(1, 4);
   const randomLength = getRandomInRange(5, 10);
   const randomNumber = getRandomInRange(1, 15);

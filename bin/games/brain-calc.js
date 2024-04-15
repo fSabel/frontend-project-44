@@ -2,12 +2,12 @@
 import runEngine from '../../src/index.js';
 import getRandomInRange from '../../src/utils.js';
 
-// Правила игры
+// The rules of the game
 const rulesCalc = 'What is the result of the expression?';
 
 const generateRound = () => {
   let answer;
-  // Генерация случайных математических операций
+  // Generating random mathematical operations
   const ops = ['+', '-', '*'];
   const opindex = getRandomInRange(0, 2);
   const operator = ops[opindex];
