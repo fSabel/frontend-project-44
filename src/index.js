@@ -2,23 +2,23 @@
 import readlineSync from 'readline-sync';
 import greeting from './cli.js';
 
-const runEngine = (isRules, generateRound) => {
-  const roundsCount = 3;
-  
+const roundsCount = 3;
+
+const runEngine = (rules, generateRound) => {
   const name = greeting();
   console.log(`Hello, ${name}!`);
-  console.log(isRules);
+  console.log(rules);
 
   for (let i = 0; i < roundsCount; i += 1) {
     const [question, answer] = generateRound();
     console.log(question);
-    const resAnswer = readlineSync.question('Your answer: ');
+    const userAnswer = readlineSync.question('Your answer: ');
 
-    // Отрицательный результат
-    const firstStr = `${resAnswer} is wrong answer ;(. Correct answer was ${answer}.\n`;
+    // Negative result
+    const firstStr = `${userAnswer} is wrong answer ;(. Correct answer was ${answer}.\n`;
     const secondStr = `Let's try again, ${name}!`;
 
-    if (resAnswer !== answer) {
+    if (userAnswer !== answer) {
       return `${firstStr}${secondStr}`;
     }
     console.log('Correct!');
