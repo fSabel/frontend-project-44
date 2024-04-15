@@ -4,8 +4,8 @@ import greeting from './cli.js';
 
 const runEngine = (isRules, generateRound) => {
   const roundsCount = 3;
-
-  const name = greeting().split('!').join('').split(', ')[1];
+  
+  const name = greeting();
   console.log(`Hello, ${name}!`);
   console.log(isRules);
 
