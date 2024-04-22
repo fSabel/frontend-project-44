@@ -5,28 +5,28 @@ import getRandomInRange from '../../src/utils.js';
 // The rules of the game
 const rulesCalc = 'What is the result of the expression?';
 
-const generateRound = () => {
-  let answer;
-  // Generating random mathematical operations
-  const ops = ['+', '-', '*'];
-  const opindex = getRandomInRange(0, 2);
-  const operator = ops[opindex];
-  const randomNumber1 = getRandomInRange();
-  const randomNumber2 = getRandomInRange();
-  const question = `Question: ${randomNumber1} ${operator} ${randomNumber2}`;
+const getRandomOperator = () => {
+  const operators = ['+', '-', '*'];
+  return operators[getRandomInRange(0, operators.length - 1)];
+};
 
-  if (operator === '+') {
-    answer = randomNumber1 + randomNumber2;
-  } else if (operator === '-') {
-    answer = randomNumber1 - randomNumber2;
-  } else {
-    answer = randomNumber1 * randomNumber2;
+const calculation = (num1, num2, operator) => {
+  switch (operator) {
+    case '+': return num1 + num2;
+    case '-': return num1 - num2;
+    case '*': return num1 * num2;
+    default: throw new Error(`Invalid operator - ${operator})`);
   }
-  return [question, answer.toString()];
 };
 
-const check = () => {
-  const rules = `${rulesCalc}`;
-  return runEngine(rules, generateRound);
+const generateRound = () => {
+  const num1 = getRandomInRange();
+  const num2 = getRandomInRange();
+  const operator = getRandomOperator();
+  const question = `Question: ${num1} ${operator} ${num2}`;
+  const answer = String(calculation(num1, num2, operator));
+
+  return [question, answer];
 };
-console.log(check());
+
+console.log(runEngine(rulesCalc, generateRound));
