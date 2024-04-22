@@ -6,20 +6,14 @@ import getRandomInRange from '../../src/utils.js';
 const rulesEven = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 // Checking for the correctness of the response
+const isEven = (num) => (num % 2 === 0 ? 'yes' : 'no');
+
+// Round generation
 const generateRound = () => {
-  let answer;
   const randomNumber = getRandomInRange();
   const question = `Question: ${randomNumber}`;
-  if (randomNumber % 2 === 0) {
-    answer = 'yes';
-  } else {
-    answer = 'no';
-  }
+  const answer = isEven(randomNumber);
   return [question, answer];
 };
 
-const check = () => {
-  const rules = `${rulesEven}`;
-  return runEngine(rules, generateRound);
-};
-console.log(check());
+console.log(runEngine(rulesEven, generateRound));
