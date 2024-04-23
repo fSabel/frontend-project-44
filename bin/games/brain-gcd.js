@@ -29,6 +29,7 @@ const gcd = (num1, num2) => {
   return answer.toString();
 };
 
+// Round generation
 const generateRound = () => {
   const randomNumber1 = getRandomInRange(1);
   const randomNumber2 = getRandomInRange(1);

@@ -10,6 +10,7 @@ const getRandomOperator = () => {
   return operators[getRandomInRange(0, operators.length - 1)];
 };
 
+// Calculator
 const calculation = (num1, num2, operator) => {
   switch (operator) {
     case '+': return num1 + num2;
@@ -19,6 +20,7 @@ const calculation = (num1, num2, operator) => {
   }
 };
 
+// Round generation
 const generateRound = () => {
   const num1 = getRandomInRange();
   const num2 = getRandomInRange();
