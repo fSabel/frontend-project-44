@@ -5,36 +5,34 @@ import getRandomInRange from '../../src/utils.js';
 // The rules of the game
 const rulesPrime = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const generateRound = () => {
-  let answer;
+// Is it a prime number or not
+const isPrime = (num) => {
   let count = 0;
-  const randomNumber = getRandomInRange(1, 30);
-  const question = `Question: ${randomNumber}`;
-  // Is it a prime number or not
-  if (randomNumber === 1) {
-    answer = 'no';
-    return answer;
+  if (num === 1) {
+    return 'no';
   }
   const checkForSimpleNum = [];
-  for (let i = randomNumber; i >= 1; i -= 1) {
+  for (let i = num; i >= 1; i -= 1) {
     checkForSimpleNum.push(i);
   }
   for (let i = 0; i < checkForSimpleNum.length; i += 1) {
-    if (randomNumber % checkForSimpleNum[i] === 0) {
+    if (num % checkForSimpleNum[i] === 0) {
       count += 1;
     }
   }
   if (count === 2) {
-    answer = 'yes';
+    return 'yes';
   } else {
-    answer = 'no';
+    return 'no';
   }
+};
 
+// Round generation
+const generateRound = () => {
+  const randomNumber = getRandomInRange(1, 30);
+  const question = `Question: ${randomNumber}`;
+  const answer = isPrime(randomNumber);
   return [question, answer];
 };
 
-const check = () => {
-  const rules = `${rulesPrime}`;
-  return runEngine(rules, generateRound);
-};
-console.log(check());
+console.log(runEngine(rulesPrime, generateRound));
