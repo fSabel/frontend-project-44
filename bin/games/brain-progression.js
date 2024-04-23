@@ -5,6 +5,19 @@ import getRandomInRange from '../../src/utils.js';
 // The rules of the game
 const rulesProgression = 'What number is missing in the progression?';
 
+// Generating a random sequence
+// const progression = (row, length, num) => {
+//   const array = [num];
+//   for (let i = array.length; i <= length; i += 1) {
+//     const newElement = array[array.length - 1] + row;
+//     array.push(newElement);
+//   }
+//   const randomElement = getRandomInRange(0, array.length - 1);
+//   array[randomElement] = '..';
+//   return array;
+// };
+
+// Round generation
 const generateRound = () => {
   let answer;
   // Generating a random sequence
