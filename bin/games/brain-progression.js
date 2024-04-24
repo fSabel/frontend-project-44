@@ -6,16 +6,16 @@ import getRandomInRange from '../../src/utils.js';
 const rulesProgression = 'What number is missing in the progression?';
 
 // Generating a random sequence
-// const progression = (row, length, num) => {
-//   const array = [num];
-//   for (let i = array.length; i <= length; i += 1) {
-//     const newElement = array[array.length - 1] + row;
-//     array.push(newElement);
-//   }
-//   const randomElement = getRandomInRange(0, array.length - 1);
-//   array[randomElement] = '..';
-//   return array;
-// };
+const progression = (row, length, num) => {
+  const array = [num];
+  for (let i = array.length; i <= length; i += 1) {
+    const newElement = array[array.length - 1] + row;
+    array.push(newElement);
+  }
+  const randomElement = getRandomInRange(0, array.length - 1);
+  array[randomElement] = '..';
+  return array;
+};
 
 // Round generation
 const generateRound = () => {
@@ -24,28 +24,18 @@ const generateRound = () => {
   const randomProgression = getRandomInRange(1, 4);
   const randomLength = getRandomInRange(5, 10);
   const randomNumber = getRandomInRange(1, 15);
-  const array = [randomNumber];
-  for (let i = array.length; i <= randomLength; i += 1) {
-    const newElement = array[array.length - 1] + randomProgression;
-    array.push(newElement);
-  }
-  const randomElement = getRandomInRange(0, array.length - 1);
-  array[randomElement] = '..';
-  const question = `Question: ${array.join(' ')}`;
+  const rowNumbers = progression(randomProgression, randomLength, randomNumber);
+  const question = `Question: ${rowNumbers.join(' ')}`;
 
-  for (let i = 0; i < array.length; i += 1) {
-    if (i === array.length - 1 && array[i] === '..') {
-      answer = array[i - 1] + randomProgression;
+  for (let i = 0; i < rowNumbers.length; i += 1) {
+    if (i === rowNumbers.length - 1 && rowNumbers[i] === '..') {
+      answer = rowNumbers[i - 1] + randomProgression;
     }
-    if (i !== array.length - 1 && array[i] === '..') {
-      answer = array[i + 1] - randomProgression;
+    if (i !== rowNumbers.length - 1 && rowNumbers[i] === '..') {
+      answer = rowNumbers[i + 1] - randomProgression;
     }
   }
   return [question, answer.toString()];
 };
 
-const check = () => {
-  const rules = `${rulesProgression}`;
-  return runEngine(rules, generateRound);
-};
-console.log(check());
+console.log(runEngine(rulesProgression, generateRound));
