@@ -20,7 +20,7 @@ const progression = (row, length, num) => {
 // Round generation
 const generateRound = () => {
   let answer;
-  // Generating a random sequence
+
   const randomProgression = getRandomInRange(1, 4);
   const randomLength = getRandomInRange(5, 10);
   const randomNumber = getRandomInRange(1, 15);
