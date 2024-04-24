@@ -22,9 +22,8 @@ const isPrime = (num) => {
   }
   if (count === 2) {
     return 'yes';
-  } else {
-    return 'no';
   }
+  return 'no';
 };
 
 // Round generation
