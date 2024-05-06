@@ -19,11 +19,11 @@ const runEngine = (rules, generateRound) => {
     const secondStr = `Let's try again, ${name}!`;
 
     if (userAnswer !== answer) {
-      return `${firstStr}${secondStr}`;
+      return console.log(`${firstStr}${secondStr}`);
     }
     console.log('Correct!');
   }
-  return `Congratulations, ${name}!`;
+  return console.log(`Congratulations, ${name}!`);
 };
 
 export default runEngine;
