@@ -21,13 +21,13 @@ const generateRound = () => {
   const randomLength = getRandomInRange(5, 10);
   const randomNumber = getRandomInRange(1, 15);
   const progression = generateProgression(randomNumber, randomStep, randomLength);
-  
+
   const hiddenIndex = getRandomInRange(0, progression.length - 1);
 
   const answer = progression[hiddenIndex].toString();
   progression[hiddenIndex] = '..';
   const question = `Question: ${progression.join(' ')}`;
-  
+
   return [question, answer];
 };
 
